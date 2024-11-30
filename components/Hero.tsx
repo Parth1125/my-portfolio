@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -17,7 +17,7 @@ export default function Hero() {
             className="text-4xl md:text-6xl font-bold mb-4"
             initial={{ y: -20 }}
             animate={{ y: 0 }}
-            transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
           >
             Hi, I'm Parth Gera
           </motion.h1>
@@ -25,7 +25,7 @@ export default function Hero() {
             className="text-xl md:text-2xl mb-4 text-gray-600"
             initial={{ y: -20 }}
             animate={{ y: 0 }}
-            transition={{ delay: 0.3, type: 'spring', stiffness: 100 }}
+            transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
           >
             Freelance Web Developer
           </motion.p>
@@ -33,9 +33,10 @@ export default function Hero() {
             className="text-lg mb-8 text-gray-600"
             initial={{ y: -20 }}
             animate={{ y: 0 }}
-            transition={{ delay: 0.4, type: 'spring', stiffness: 100 }}
+            transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
           >
-            Transforming ideas into powerful web solutions. Let's bring your vision to life!
+            Transforming ideas into powerful web solutions. Let's bring your
+            vision to life!
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -65,7 +66,7 @@ export default function Hero() {
         >
           <div className="relative w-64 h-64 mx-auto">
             <Image
-              src="/placeholder.svg?height=256&width=256"
+              src="/images/parth photo.jpg"
               alt="Parth Gera"
               layout="fill"
               objectFit="cover"
@@ -75,6 +76,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-

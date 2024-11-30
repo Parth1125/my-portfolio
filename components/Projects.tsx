@@ -1,31 +1,34 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
   {
-    title: 'E-commerce Platform',
-    description: 'A full-stack e-commerce solution with secure payments and inventory management.',
-    image: '/placeholder.svg?height=200&width=300',
-    link: '#',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    title: "Promptia",
+    description:
+      "Promptia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
+    image: "/images/projects/promptia.png",
+    link: "https://promptia-xi.vercel.app/",
+    tags: ["Next.js", "Tailwind", "MongoDB"],
   },
   {
-    title: 'Task Management App',
-    description: 'A responsive web app for efficient task management with real-time updates.',
-    image: '/placeholder.svg?height=200&width=300',
-    link: '#',
-    tags: ['React', 'Firebase', 'Material-UI'],
+    title: "Great Quotes",
+    description:
+      "A responsive web app for providing inspiring quotes and author details.",
+    image: "/images/projects/great quotes.png",
+    link: "https://greatquotes-18d54.web.app/quotes",
+    tags: ["React", "Firebase", "Material-UI"],
   },
   {
-    title: 'Blog CMS',
-    description: 'A content management system for blogs with a user-friendly admin interface.',
-    image: '/placeholder.svg?height=200&width=300',
-    link: '#',
-    tags: ['Next.js', 'Express', 'PostgreSQL'],
+    title: "Blog CMS",
+    description:
+      "A content management system for blogs with a user-friendly admin interface.",
+    image: "/images/projects/blog-cms.png",
+    link: "#",
+    tags: ["Next.js", "Express", "PostgreSQL"],
   },
-]
+];
 
 export default function Projects() {
   return (
@@ -47,7 +50,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+              whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
             >
               <div className="relative h-48">
                 <Image
@@ -62,7 +65,10 @@ export default function Projects() {
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="mb-4 flex flex-wrap">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm mr-2 mb-2">
+                    <span
+                      key={tag}
+                      className="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm mr-2 mb-2"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -95,6 +101,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

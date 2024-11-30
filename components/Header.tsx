@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const menuItems = ['Home', 'Skills', 'Projects', 'Contact']
+  const menuItems = ["Home", "Skills", "Projects", "Contact"];
 
   return (
     <motion.header
       className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-md"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
@@ -66,7 +66,7 @@ export default function Header() {
             <motion.div
               className="md:hidden mt-4 space-y-2"
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
@@ -86,6 +86,5 @@ export default function Header() {
         </AnimatePresence>
       </nav>
     </motion.header>
-  )
+  );
 }
-
