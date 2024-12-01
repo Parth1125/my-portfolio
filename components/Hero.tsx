@@ -6,86 +6,58 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <div className="container mx-auto px-6 py-20 md:py-32">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 space-y-6"
-          >
-            <h1 className="font-bold text-5xl md:text-7xl tracking-tight text-gray-900">
-              Hi, I'm{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                Parth Gera
-              </span>
-            </h1>
+    <section className="container mx-auto px-4 py-20">
+      <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex-1 space-y-6">
+          <p className="text-primary">Welcome</p>
+          <h1 className="text-5xl font-bold">
+            I have <span className="text-primary">Creative Design</span>{" "}
+            Experience
+          </h1>
+          <p className="text-gray-600">
+            I'm Tanvi, a creative Product Designer. I've been helping businesses
+            to solve their problems with my design for 2 years.
+          </p>
+          <div className="flex gap-4">
+            <a
+              href="#contact"
+              className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              Contact Me
+            </a>
+            <a
+              href="#projects"
+              className="px-6 py-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              View Projects →
+            </a>
+          </div>
+        </div>
 
-            <h2 className="text-2xl md:text-3xl text-gray-600 font-light">
-              Freelance Web Developer
-            </h2>
-
-            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl font-light">
-              Transforming ideas into powerful web solutions. Let's bring your
-              vision to life!
-            </p>
-
-            <div className="flex flex-wrap gap-4 pt-6">
-              <motion.a
-                href="#projects"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center px-8 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 
-                text-white rounded-full font-medium shadow-lg shadow-blue-500/30 hover:shadow-xl 
-                transition-all duration-200"
+        <div className="flex-1 relative">
+          <div className="relative w-[400px] h-[400px] border-8 border-primary/20 rounded-lg">
+            <Image
+              src="/images/parth photo.jpg"
+              alt="Profile"
+              fill
+              className="object-cover rounded"
+            />
+          </div>
+          <div className="absolute -right-4 top-4 flex flex-col gap-2">
+            {["facebook", "twitter", "linkedin"].map((social) => (
+              <div
+                key={social}
+                className="w-10 h-10 bg-white shadow-lg rounded-lg flex items-center justify-center"
               >
-                <span>View My Work</span>
-                <svg
-                  className="w-5 h-5 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </motion.a>
-
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center px-8 py-3.5 border-2 border-blue-600 text-blue-600 
-                rounded-full font-medium hover:bg-blue-50 transition-all duration-200"
-              >
-                Hire Me
-              </motion.a>
-            </div>
-          </motion.div>
-
-          {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-20 blur-3xl" />
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <Image
-                src="/images/parth photo.jpg"
-                alt="Parth Gera"
-                fill
-                className="rounded-full object-cover border-4 border-white shadow-2xl"
-              />
-            </div>
-          </motion.div>
+                <Image
+                  src={`/icons/${social}.svg`}
+                  alt={social}
+                  width={20}
+                  height={20}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
