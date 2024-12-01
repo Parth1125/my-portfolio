@@ -10,38 +10,39 @@ export default function Header() {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-md"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a] bg-opacity-95 backdrop-blur-md"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
       <nav className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          <motion.a
-            href="#"
-            className="text-2xl font-bold text-gray-800"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Parth Gera
-          </motion.a>
-          <div className="hidden md:flex space-x-6">
+        <div className="flex justify-center items-center">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-12">
             {menuItems.map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-600 hover:text-gray-900 transition duration-300"
-                whileHover={{ scale: 1.1 }}
+                className="relative text-gray-300 text-lg font-medium group"
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item}
+                <motion.span
+                  className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 group-hover:w-full transition-all duration-300"
+                  layoutId="underline"
+                />
               </motion.a>
             ))}
           </div>
-          <div className="md:hidden">
-            <button
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden w-full flex justify-end">
+            <motion.button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
+              className="text-gray-300 hover:text-blue-500 focus:outline-none"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
               <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
                 {isOpen ? (
@@ -58,25 +59,28 @@ export default function Header() {
                   ></path>
                 )}
               </svg>
-            </button>
+            </motion.button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="md:hidden mt-4 space-y-2"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              className="md:hidden mt-4 flex flex-col items-center space-y-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
             >
               {menuItems.map((item) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="block text-gray-600 hover:text-gray-900 transition duration-300"
+                  className="text-gray-300 hover:text-blue-500 text-lg font-medium"
                   onClick={() => setIsOpen(false)}
-                  whileHover={{ x: 5 }}
+                  whileHover={{ scale: 1.05, x: 5 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {item}
                 </motion.a>

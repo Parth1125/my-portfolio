@@ -1,79 +1,92 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-20 pb-12 md:pt-32 md:pb-24">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
-        <motion.div
-          className="md:w-1/2 text-center md:text-left"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-4"
-            initial={{ y: -20 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
-          >
-            Hi, I'm Parth Gera
-          </motion.h1>
-          <motion.p
-            className="text-xl md:text-2xl mb-4 text-gray-600"
-            initial={{ y: -20 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
-          >
-            Freelance Web Developer
-          </motion.p>
-          <motion.p
-            className="text-lg mb-8 text-gray-600"
-            initial={{ y: -20 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
-          >
-            Transforming ideas into powerful web solutions. Let's bring your
-            vision to life!
-          </motion.p>
+    <section className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div className="container mx-auto px-6 py-20 md:py-32">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="space-x-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex-1 space-y-6"
           >
-            <a
-              href="#projects"
-              className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 inline-block"
-            >
-              View My Work
-            </a>
-            <a
-              href="#footer"
-              className="bg-gray-200 text-gray-800 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-300 transition duration-300 inline-block"
-            >
-              Hire Me
-            </a>
+            <h1 className="font-bold text-5xl md:text-7xl tracking-tight text-gray-900">
+              Hi, I'm{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Parth Gera
+              </span>
+            </h1>
+
+            <h2 className="text-2xl md:text-3xl text-gray-600 font-light">
+              Freelance Web Developer
+            </h2>
+
+            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl font-light">
+              Transforming ideas into powerful web solutions. Let's bring your
+              vision to life!
+            </p>
+
+            <div className="flex flex-wrap gap-4 pt-6">
+              <motion.a
+                href="#projects"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center px-8 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 
+                text-white rounded-full font-medium shadow-lg shadow-blue-500/30 hover:shadow-xl 
+                transition-all duration-200"
+              >
+                <span>View My Work</span>
+                <svg
+                  className="w-5 h-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </motion.a>
+
+              <motion.a
+                href="#contact"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center px-8 py-3.5 border-2 border-blue-600 text-blue-600 
+                rounded-full font-medium hover:bg-blue-50 transition-all duration-200"
+              >
+                Hire Me
+              </motion.a>
+            </div>
           </motion.div>
-        </motion.div>
-        <motion.div
-          className="md:w-1/2 mt-8 md:mt-0"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <div className="relative w-64 h-64 mx-auto">
-            <Image
-              src="/images/parth photo.jpg"
-              alt="Parth Gera"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-full shadow-lg"
-            />
-          </div>
-        </motion.div>
+
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-20 blur-3xl" />
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              <Image
+                src="/images/parth photo.jpg"
+                alt="Parth Gera"
+                fill
+                className="rounded-full object-cover border-4 border-white shadow-2xl"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

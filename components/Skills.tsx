@@ -2,17 +2,7 @@
 
 import { motion } from "framer-motion";
 import { skills } from "../data/skills";
-
-// const skills = [
-//   { name: "React.js", icon: "⚛️" },
-//   { name: "Next.js", icon: "▲" },
-//   { name: "Express.js", icon: "🚂" },
-//   { name: "Node.js", icon: "🟢" },
-//   { name: "MongoDB", icon: "🍃" },
-//   { name: "Responsive Design", icon: "📱" },
-//   { name: "API Integration", icon: "🔗" },
-//   { name: "UI/UX Design", icon: "🎨" },
-// ];
+import Image from "next/image";
 
 export default function Skills() {
   return (
@@ -56,10 +46,12 @@ export default function Skills() {
                       }}
                     >
                       <div className="w-12 h-12 mb-3 flex items-center justify-center">
-                        <img
+                        <Image
                           src={skill.icon}
                           alt={skill.name}
-                          className="w-full h-full object-contain"
+                          width={48}
+                          height={48}
+                          className="object-contain"
                         />
                       </div>
                       <span className="text-sm font-medium text-gray-800">

@@ -1,17 +1,27 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import "./globals.css";
+import { Inter, Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata = {
-  title: 'Parth Gera - Software Developer',
-  description: 'Portfolio of Parth Gera, a skilled software developer specializing in React.js, Next.js, Express.js, Node.js, and MongoDB.',
-}
+  title: "Parth Gera - Software Developer",
+  description:
+    "Portfolio of Parth Gera, a skilled software developer specializing in React.js, Next.js, Express.js, Node.js, and MongoDB.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -20,6 +30,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
-
