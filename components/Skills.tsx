@@ -50,7 +50,7 @@ export default function Skills() {
     <section className="container mx-auto px-4 py-20" id="skills">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">
-          My Web Development <span className="text-primary">Toolkit</span>
+          My Software Development <span className="text-primary">Toolkit</span>
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
           A comprehensive set of technologies I use to bring ideas to life
