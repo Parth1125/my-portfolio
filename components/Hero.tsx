@@ -1,47 +1,101 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="container mx-auto px-4 py-20">
       <div className="flex flex-col md:flex-row items-center gap-12">
-        <div className="flex-1 space-y-6">
-          <p className="text-primary">Welcome</p>
-          <h1 className="text-5xl font-bold">
+        <motion.div
+          className="flex-1 space-y-6"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <motion.p
+            className="text-primary"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            Welcome
+          </motion.p>
+          <motion.h1
+            className="text-5xl font-bold"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
             I am <span className="text-primary">Software Developer</span>{" "}
-          </h1>
-          <p className="text-gray-600">
+          </motion.h1>
+          <motion.p
+            className="text-gray-600"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
             I'm Parth, a Software developer. I've been helping businesses to
             solve their problems with my development for 1 year.
-          </p>
-          <div className="flex gap-4">
-            <a
+          </motion.p>
+          <motion.div
+            className="flex gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
+            <motion.a
               href="#contact"
               className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "rgb(var(--primary-rgb)/0.9)",
+              }}
+              whileTap={{ scale: 0.95 }}
             >
               Contact Me
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#projects"
               className="px-6 py-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "rgb(249, 250, 251)",
+              }}
+              whileTap={{ scale: 0.95 }}
             >
               View Projects →
-            </a>
-          </div>
-        </div>
+            </motion.a>
+          </motion.div>
+        </motion.div>
 
-        <div className="flex-1 relative">
-          <div className="relative w-[400px] h-[400px] border-8 border-primary/20 rounded-lg">
+        <motion.div
+          className="flex-1 relative"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
+          <motion.div
+            className="relative w-[400px] h-[400px] border-8 border-primary/20 rounded-lg"
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            whileHover={{ scale: 1.02 }}
+          >
             <Image
               src="/images/parth photo.jpg"
               alt="Profile"
               fill
               className="object-cover rounded"
             />
-          </div>
-          <div className="absolute -right-4 top-4 flex flex-col gap-2">
+          </motion.div>
+          <motion.div
+            className="absolute -right-4 top-4 flex flex-col gap-2"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.9, duration: 0.5 }}
+          >
             {[
               { icon: "github", href: "https://github.com/Parth1125" },
               {
@@ -49,13 +103,22 @@ export default function Hero() {
                 href: "https://www.linkedin.com/in/parthgera326/",
               },
               { icon: "twitter", href: "https://x.com/parthgera25" },
-            ].map((social) => (
-              <a
+            ].map((social, index) => (
+              <motion.a
                 key={social.icon}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white shadow-lg rounded-lg flex items-center justify-center hover:text-primary transition-colors"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 + index * 0.2 }}
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 5,
+                  color: "rgb(var(--primary-rgb))",
+                }}
+                whileTap={{ scale: 0.9 }}
               >
                 <svg
                   className="h-5 w-5"
@@ -81,10 +144,10 @@ export default function Hero() {
                     <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a14.207 14.207 0 007.667 2.283c9.2 0 14.222-7.617 14.222-14.223 0-.215-.005-.43-.014-.645a10.063 10.063 0 002.479-2.591z" />
                   )}
                 </svg>
-              </a>
+              </motion.a>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
