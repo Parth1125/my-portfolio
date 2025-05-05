@@ -25,6 +25,7 @@ export default function Footer() {
           transition={{ duration: 0.5 }}
         >
           <div>
+            {/*  eslint-disable react/no-unescaped-entities, @typescript-eslint/no-explicit-any  */}
             <motion.h3
               className="text-2xl font-bold mb-4"
               initial={{ opacity: 0, y: -20 }}
