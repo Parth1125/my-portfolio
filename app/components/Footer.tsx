@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 
 export default function Footer() {
+  console.log("hi there");
   const contactInfo = [
     { icon: "📧", label: "Email", value: "parth.gera@example.com" },
     { icon: "📱", label: "Phone", value: "+1 (123) 456-7890" },
