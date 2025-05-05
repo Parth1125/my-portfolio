@@ -2,13 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import coreai from "../../public/images/projects/coreai.png";
+import greatquotes from "../../public/images/projects/great quotes.png";
+import promptia from "../../public/images/projects/promptia.png";
 
 const projects = [
   {
     title: "Core AI",
     description:
       "Your personal AI voice fitness coach. Build custom workouts, track goals, and stay motivated—all with your voice.",
-    image: "/images/projects/coreai.png",
+    image: coreai,
     link: "https://core-ai-five.vercel.app/",
     tags: ["Next.js", "Express", "PostgreSQL"],
     liveUrl: "https://core-ai-five.vercel.app/",
@@ -18,7 +21,7 @@ const projects = [
     title: "Promptia",
     description:
       "Promptia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
-    image: "/images/projects/promptia.png",
+    image: promptia,
     link: "https://promptia-xi.vercel.app/",
     tags: ["Next.js", "Tailwind", "MongoDB"],
     liveUrl: "https://promptia-xi.vercel.app/",
@@ -28,7 +31,7 @@ const projects = [
     title: "Great Quotes",
     description:
       "A responsive web app for providing inspiring quotes and author details.",
-    image: "/images/projects/great quotes.png",
+    image: greatquotes,
     link: "https://greatquotes-18d54.web.app/quotes",
     tags: ["React", "Firebase", "Material-UI"],
     liveUrl: "https://greatquotes-18d54.web.app/quotes",
