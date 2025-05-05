@@ -30,6 +30,7 @@ export default function Hero() {
           >
             I am <span className="text-primary">Software Developer</span>{" "}
           </motion.h1>
+          {/*  eslint-disable react/no-unescaped-entities, @typescript-eslint/no-explicit-any  */}
           <motion.p
             className="text-gray-600"
             initial={{ opacity: 0 }}

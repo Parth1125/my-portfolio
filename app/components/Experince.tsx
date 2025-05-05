@@ -2,39 +2,29 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Calendar, Briefcase, ChevronRight, ExternalLink } from "lucide-react";
+import { Calendar, Briefcase, ChevronRight } from "lucide-react";
 
 // Sample data structure - replace with your actual experience data
 const experienceData = [
   {
     id: 1,
-    role: "Senior Frontend Developer",
-    company: "Tech Innovations Inc.",
-    duration: "2021 - Present",
+    role: "Software Engineer",
+    company: "Codebia Solutions Private Limited.",
+    duration: "Jan 2024 - Present",
     description:
-      "Led the development of responsive web applications using React and Next.js. Implemented modern UI/UX designs and improved performance metrics by 40%.",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    link: "https://techinnovations.example",
+      "Utilized a robust tech stack comprising JavaScript, React.js, Formik, Primeflex, and Material UI to elevate project development. This comprehensive approach ensured streamlined processes, resulting in a 20% reduction in development time and an enriched user experience",
+    skills: ["React", "PrimeReact", "JavaScript", "Primeflex CSS", "Formik"],
+    // link: "https://techinnovations.example",
   },
   {
     id: 2,
-    role: "Frontend Developer",
-    company: "Digital Solutions Ltd.",
-    duration: "2018 - 2021",
+    role: "Full Stack Developer Intern",
+    company: "Blazify Private Limited.",
+    duration: "Jan 2023- March 2023",
     description:
-      "Developed and maintained multiple client websites. Collaborated with designers to implement pixel-perfect interfaces and animations.",
-    skills: ["JavaScript", "React", "CSS", "GSAP"],
-    link: "https://digitalsolutions.example",
-  },
-  {
-    id: 3,
-    role: "Web Developer Intern",
-    company: "StartUp Ventures",
-    duration: "2017 - 2018",
-    description:
-      "Assisted in the development of web applications. Gained hands-on experience with modern frontend technologies and agile development practices.",
-    skills: ["HTML", "CSS", "JavaScript", "jQuery"],
-    link: "https://startupventures.example",
+      "•Led Full Stack Development of an e-commerce website utilizing modern technology's to create user-friendly and scalable online platform",
+    skills: ["JavaScript", "React", "CSS", "Firebase", "Chakra"],
+    // link: "https://digitalsolutions.example",
   },
 ];
 
@@ -57,6 +47,7 @@ export default function ExperienceSection() {
           </h2>
           <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6 rounded-full"></div>
           <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+            {/*  eslint-disable react/no-unescaped-entities, @typescript-eslint/no-explicit-any  */}
             A timeline of my professional journey, showcasing the companies I've
             worked with and the skills I've developed along the way.
           </p>
@@ -152,7 +143,7 @@ export default function ExperienceSection() {
                     </div>
                   </div>
 
-                  <a
+                  {/* <a
                     href={experience.link}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -160,7 +151,7 @@ export default function ExperienceSection() {
                   >
                     <span className="mr-1">Visit website</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </a> */}
                 </motion.div>
               </div>
             </motion.div>
