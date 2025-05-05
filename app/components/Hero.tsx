@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import parthPhoto from "../../public/images/parth photo1.png";
 
 export default function Hero() {
   return (
@@ -85,7 +86,7 @@ export default function Hero() {
             whileHover={{ scale: 1.02 }}
           >
             <Image
-              src="/images/parth photo.jpg"
+              src={parthPhoto}
               alt="Profile"
               fill
               className="object-cover rounded"
@@ -122,7 +123,7 @@ export default function Hero() {
                 whileTap={{ scale: 0.9 }}
               >
                 <svg
-                  className="h-5 w-5"
+                  className="h-5 w-5 text-black"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
