@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { skills } from "../data/skills";
+import { skills } from "../../data/skills";
 import Image from "next/image";
 // import { motion } from "framer-motion";
 

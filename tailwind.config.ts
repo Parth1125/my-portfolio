@@ -12,6 +12,9 @@ const config: Config = {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
       },
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
     },
   },
   plugins: [],
