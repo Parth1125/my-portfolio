@@ -60,10 +60,9 @@ export default function Hero() {
             </motion.a>
             <motion.a
               href="#projects"
-              className="px-6 py-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+              className="px-6 py-3 border border-gray-200 rounded-lg hover:bg-white transition-colors hover:text-black"
               whileHover={{
                 scale: 1.05,
-                backgroundColor: "#00c172",
               }}
               whileTap={{ scale: 0.95 }}
             >
