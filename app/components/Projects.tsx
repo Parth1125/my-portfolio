@@ -91,7 +91,7 @@ export default function Projects() {
           My Creative Works
           <span className="text-primary"> Latest Projects</span>
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-white max-w-2xl mx-auto">
           Check out some of my recent projects that showcase my skills and
           expertise
         </p>

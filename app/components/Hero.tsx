@@ -33,7 +33,7 @@ export default function Hero() {
           </motion.h1>
           {/*  eslint-disable react/no-unescaped-entities, @typescript-eslint/no-explicit-any  */}
           <motion.p
-            className="text-gray-600"
+            className="text-white"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -63,7 +63,7 @@ export default function Hero() {
               className="px-6 py-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
               whileHover={{
                 scale: 1.05,
-                backgroundColor: "rgb(249, 250, 251)",
+                backgroundColor: "#00c172",
               }}
               whileTap={{ scale: 0.95 }}
             >

@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 export default function Footer() {
   console.log("hi there");
   const contactInfo = [
-    { icon: "📧", label: "Email", value: "parth.gera@example.com" },
-    { icon: "📱", label: "Phone", value: "+1 (123) 456-7890" },
-    { icon: "📍", label: "Location", value: "New York, NY" },
+    { icon: "📧", label: "Email", value: "pgera326@gmail.com" },
+    // { icon: "📱", label: "Phone", value: "+1 (123) 456-7890"1 },
+    { icon: "📍", label: "Location", value: "India" },
   ];
 
   const socialLinks = [

@@ -75,7 +75,7 @@ export default function Skills() {
         <h2 className="text-4xl font-bold mb-4">
           My Software Development <span className="text-primary">Toolkit</span>
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-white max-w-2xl mx-auto">
           A comprehensive set of technologies I use to bring ideas to life
         </p>
       </motion.div>
