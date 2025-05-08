@@ -13,7 +13,7 @@ const projects = [
       "Your personal AI voice fitness coach. Build custom workouts, track goals, and stay motivated—all with your voice.",
     image: coreai,
     link: "https://core-ai-five.vercel.app/",
-    tags: ["Next.js", "Express", "PostgreSQL"],
+    tags: ["Next.js", "Typescript", "LLMs", "Shadcn UI", "Convex"],
     liveUrl: "https://core-ai-five.vercel.app/",
     githubUrl: "https://github.com/Parth1125/Core-AI",
   },
