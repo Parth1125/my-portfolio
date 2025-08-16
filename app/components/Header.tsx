@@ -95,7 +95,7 @@ export default function Header() {
         </nav>
 
         <motion.a
-          href="/Parth_Gera_Resume.pdf"
+          href="https://parth1125.github.io/my-portfolio/Parth_Gera_Resume.pdf"
           download
           className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors relative overflow-hidden"
           initial={{ opacity: 0, x: 20 }}
