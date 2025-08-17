@@ -11,9 +11,9 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: "github", href: "https://github.com/parthgera" },
-    { icon: "linkedin", href: "https://linkedin.com/in/parthgera" },
-    { icon: "twitter", href: "https://twitter.com/parthgera" },
+    { icon: "github", href: "https://github.com/Parth1125" },
+    { icon: "linkedin", href: "https://www.linkedin.com/in/parthgera326/" },
+    { icon: "twitter", href: "https://x.com/parthgera25" },
   ];
 
   return (
