@@ -29,7 +29,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            I am <span className="text-primary">Software Developer</span>{" "}
+            I am <span className="text-primary">Software Engineer</span>{" "}
           </motion.h1>
           {/*  eslint-disable react/no-unescaped-entities, @typescript-eslint/no-explicit-any  */}
           <motion.p
@@ -38,8 +38,8 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            I'm Parth, a Software developer. I've been helping businesses to
-            solve their problems with my development for 1 year.
+            I'm Parth, a Software Engineer. I've been helping businesses to
+            solve their problems and create scalable web apps.
           </motion.p>
           <motion.div
             className="flex gap-4"
